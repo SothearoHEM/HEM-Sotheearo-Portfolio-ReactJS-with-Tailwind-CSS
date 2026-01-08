@@ -1,4 +1,3 @@
-import React from 'react'
 import { User, Globe, Heart,Award, Target, Coffee} from 'lucide-react';
 import personalImg from '../assets/DSC02809-3.jpg';
 
@@ -7,7 +6,7 @@ function About() {
     { label: 'Years of Study', value: '3+', icon: Award },
     { label: 'Volunteer Events', value: '3', icon: Heart },
     { label: 'Certifications', value: '3', icon: Target },
-    { label: 'Projects Completed', value: '4+', icon: Coffee },
+    { label: 'Projects Completed', value: '5+', icon: Coffee },
   ];
   return (
      <section className='py-20 px-6 bg-linear-to-br from-slate-50 to-cyan-50' id="about">
@@ -112,11 +111,11 @@ function About() {
 
           <div className='order-1 md:order-2'>
             <div className='relative'>
-              <div className='absolute inset-0 md:w-137.5 w-auto bg-linear-to-r from-cyan-500 via-purple-500 to-orange-500 rounded-lg transform rotate-3'></div>
+              <div className='absolute inset-0 bg-linear-to-r from-cyan-500 via-purple-500 to-orange-500 rounded-lg transform rotate-3'></div>
               <img 
                 src={personalImg} 
                 alt="Hem Sothearo" 
-                className='relative w-137.5 rounded-lg shadow-2xl'
+                className='relative rounded-lg shadow-2xl'
               />
             </div>
           </div>

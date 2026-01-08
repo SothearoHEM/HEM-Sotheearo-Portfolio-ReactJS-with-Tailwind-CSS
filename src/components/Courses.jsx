@@ -1,4 +1,3 @@
-import React from 'react'
 import { BookOpen, Network, CheckCircle, MapPin, Calendar, Award } from 'lucide-react';
 
 function Courses() {
@@ -54,7 +53,7 @@ function Courses() {
 
   return (
     <section className='py-20 px-6 bg-linear-to-br from-slate-50 via-cyan-50 to-purple-50' id="courses">
-      <div className='max-w-6xl mx-auto'>
+      <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-12'>
           <h2 className='text-4xl md:text-5xl mb-4 text-transparent bg-clip-text bg-linear-to-r from-blue-900 via-purple-900 to-cyan-900'>Courses & Certifications</h2>
           <p className='text-lg text-slate-600 max-w-2xl mx-auto'>
@@ -75,7 +74,8 @@ function Courses() {
                 key={index}
                 className='bg-white rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-purple-300'
               >
-                <div className='grid md:grid-cols-3 gap-6'>                  <div className={`bg-linear-to-br ${iconGradients[index]} text-white p-8 flex flex-col items-center justify-center text-center`}>
+                <div className='grid md:grid-cols-3 gap-6'>                  
+                  <div className={`bg-linear-to-br ${iconGradients[index]} text-white p-8 flex flex-col items-center justify-center text-center`}>
                     <Icon className='w-16 h-16 mb-4' />
                     <div className='flex items-center gap-2 bg-green-400 text-green-900 px-4 py-2 rounded-full text-sm shadow-lg'>
                       <CheckCircle className='w-4 h-4' />

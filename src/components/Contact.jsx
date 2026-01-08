@@ -1,14 +1,37 @@
-import React from 'react'
 import { useState } from 'react';
-import { Send, Phone, Mail, MapPin, Github, Linkedin, Facebook } from 'lucide-react';
+import { Send, Phone, Mail, MapPin, Github, Linkedin, Facebook} from 'lucide-react';
+import { FaTelegram } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
+  const time = new Date().toLocaleString('en-US', { timeZone: 'Asia/Phnom_Penh', hour12: true });
   const [formData, setFormData] = useState({
+    time: time,
     name: '',
     email: '',
     subject: '',
     message: ''
   });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs.send('service_h91tuch', 'template_3d3bq8f', formData, 'Hn0BPBdxDqRJRrzZ6')
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Message sent successfully! Thank you for sending me a message. I will get back to you soon.');
+        setFormData({
+          name: '',
+          time: time,
+          email: '',
+          subject: '',
+          message: ''
+        });
+      }, (err) => {
+        console.log('FAILED...', err);
+        alert('Failed to send message. Please try again later.');
+      }
+    );
+  }
 
   return (
     <section className='py-20 px-6 bg-linear-to-br from-blue-900 via-purple-900 to-indigo-900 text-white relative overflow-hidden' id="contact">
@@ -17,7 +40,7 @@ function Contact() {
         <div className='absolute bottom-0 right-1/4 w-96 h-96 bg-orange-500 rounded-full blur-3xl animate-pulse delay-500'></div>
       </div>
 
-      <div className='max-w-6xl mx-auto relative z-10'>
+      <div className='max-w-7xl mx-auto relative z-10'>
         <div className='text-center mb-12'>
           <h2 className='text-4xl md:text-5xl mb-4'>Get In Touch</h2>
           <p className='text-lg text-cyan-200 max-w-2xl mx-auto'>
@@ -35,6 +58,7 @@ function Contact() {
                   type="text"
                   id="name"
                   name="name"
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   value={formData.name}
                   required
                   className='w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white placeholder-cyan-300/50 focus:outline-none focus:border-cyan-400 transition-colors'
@@ -49,6 +73,7 @@ function Contact() {
                   id="email"
                   name="email"
                   value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
                   className='w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white placeholder-cyan-300/50 focus:outline-none focus:border-cyan-400 transition-colors'
                   placeholder="john@example.com"
@@ -61,6 +86,7 @@ function Contact() {
                   type="text"
                   id="subject"
                   name="subject"
+                  onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   value={formData.subject}
                   required
                   className='w-full px-4 py-3 rounded-lg bg-white/5 border border-white/20 text-white placeholder-cyan-300/50 focus:outline-none focus:border-cyan-400 transition-colors'
@@ -73,6 +99,7 @@ function Contact() {
                 <textarea
                   id="message"
                   name="message"
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   value={formData.message}
                   required
                   rows={5}
@@ -83,6 +110,7 @@ function Contact() {
 
               <button
                 type="submit"
+                onClick={handleSubmit}
                 className='w-full bg-linear-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-6 py-3 rounded-lg transition-all hover:scale-105 flex items-center justify-center gap-2 shadow-lg shadow-purple-500/50'
               >
                 <Send className='w-5 h-5' />
@@ -142,28 +170,36 @@ function Contact() {
               <h3 className='text-xl mb-4'>Connect With Me</h3>
               <div className='flex gap-4'>
                 <a 
-                  href="#" 
+                  href="https://github.com/SothearoHEM" 
                   className='w-14 h-14 bg-linear-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg flex items-center justify-center transition-all hover:scale-110 shadow-lg'
                   aria-label="GitHub"
                 >
                   <Github className='w-7 h-7' />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/in/sothearohem/" 
                   className='w-14 h-14 bg-linear-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-lg flex items-center justify-center transition-all hover:scale-110 shadow-lg'
                   aria-label="LinkedIn"
                 >
                   <Linkedin className='w-7 h-7' />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.facebook.com/sothearo.hem" 
                   className='w-14 h-14 bg-linear-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 rounded-lg flex items-center justify-center transition-all hover:scale-110 shadow-lg'
                   aria-label="Facebook"
                 >
                   <Facebook className='w-7 h-7' />
                 </a>
+                <a 
+                  href="https://t.me/HemSothearo" 
+                  className='w-14 h-14 bg-linear-to-r from-cyan-600 to-green-500 hover:from-cyan-700 hover:to-green-600 rounded-lg flex items-center justify-center transition-all hover:scale-110 shadow-lg'
+                  aria-label="Telegram"
+                >
+                  <FaTelegram className='w-7 h-7' />
+                </a>
               </div>
-            </div>            <div className='bg-linear-to-r from-green-500 to-teal-500 p-6 rounded-lg shadow-lg'>
+            </div>            
+            <div className='bg-linear-to-r from-green-500 to-teal-500 p-6 rounded-lg shadow-lg'>
               <h4 className='text-xl mb-2'>Current Status</h4>
               <div className='flex items-center gap-2'>
                 <div className='w-3 h-3 bg-white rounded-full animate-pulse'></div>

@@ -3,7 +3,7 @@ import { Code2, ExternalLink,Github } from 'lucide-react'
 function Projects() {
   const projects = [
     {
-      title: "Responsive Portfolio Website",
+      title: "Responsive Portfolio Website Used ReactJS with Tailwind CSS",
       description: "A fully responsive personal portfolio website showcasing my work and skills. Built with modern web technologies including React and Tailwind CSS.",
       technologies: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
       features: [
@@ -12,73 +12,70 @@ function Projects() {
         "Interactive UI components",
         "Optimized performance"
       ],
-      status: "Completed"
+      status: "Completed",
+      liveDemo: "https://hem-sotheearo-portfolio-react-js-wi.vercel.app/",
+      code: "https://github.com/SothearoHEM/HEM-Sotheearo-Portfolio-ReactJS-with-Tailwind-CSS"
     },
     {
-      title: "E-Commerce Landing Page",
-      description: "Modern and attractive landing page for an e-commerce platform with product showcases, responsive grid layout, and interactive elements.",
+      title: "Responsive Portfolio Website Used HTML CSS and JavaScript",
+      description: "A personal portfolio website to showcase my skills, projects, my education, and experience. Built using HTML, CSS, and JavaScript with a responsive design.",
       technologies: ["HTML", "CSS", "JavaScript"],
+      features: [
+        "Fully responsive design",
+        "Smooth scrolling navigation",
+        "Interactive UI components",
+        "Optimized performance"
+      ],
+      status: "Completed",
+      liveDemo: "https://sothearohem.github.io/HEM-Sotheearo-Portfolio/",
+      code: "https://github.com/SothearoHEM/HEM-Sotheearo-Portfolio"
+    },
+    {
+      title: "E-Commerce Project",
+      description: "A responsive e-commerce website featuring product listings, shopping cart functionality, and a user-friendly interface,Cart built with modern web technologies.",
+      technologies: ["HTML", "CSS", "JavaScript","React", "Tailwind CSS"],
       features: [
         "Product grid layout",
         "Shopping cart functionality",
         "Mobile-first design",
         "Cross-browser compatible"
       ],
-      status: "Completed"
+      status: "Completed",
+      liveDemo: "https://e-commerce-project-chi-vert.vercel.app/",
+      code: "https://github.com/SothearoHEM/E-commerce-Project"
     },
     {
-      title: "Weather Dashboard",
-      description: "Interactive weather application that displays current weather conditions and forecasts using external API integration.",
-      technologies: ["JavaScript", "HTML", "CSS", "API Integration"],
+      title: "Memory Game",
+      description: "A fun and interactive memory matching game where players flip cards to find matching pairs. Built with HTML, CSS, and JavaScript.",
+      technologies: ["JavaScript", "HTML", "CSS"],
       features: [
-        "Real-time weather data",
-        "Location-based search",
-        "5-day forecast",
-        "Responsive interface"
+        "Card flip animations",
+        "Score tracking",
+        "Responsive design",
+        "Timer functionality"
       ],
-      status: "In Progress"
+      status: "Completed",
+      liveDemo: "https://sothearohem.github.io/Memory-Game/",
+      code: "https://github.com/SothearoHEM/Memory-Game"
     },
     {
-      title: "Task Management App",
-      description: "A simple yet powerful task management application with features like adding, editing, and deleting tasks with local storage persistence.",
-      technologies: ["React", "JavaScript", "CSS"],
+      title: "New Year Countdown Timer",
+      description: "A countdown timer that counts down to the New Year, featuring dynamic time updates and celebratory animations when the countdown reaches zero.",
+      technologies: ["JavaScript", "HTML", "CSS"],
       features: [
-        "CRUD operations",
-        "Local storage integration",
-        "Task filtering",
-        "Clean UI design"
+        "Real-time countdown",
+        "Responsive design",
+        "Customizable target date"
       ],
-      status: "Completed"
+      status: "Completed",
+      liveDemo: "https://sothearohem.github.io/New-Year-Countdown/",
+      code: "https://github.com/SothearoHEM/New-Year-Countdown"
     },
-    {
-      title: "Restaurant Website",
-      description: "Elegant restaurant website featuring menu displays, reservation system, and gallery section with smooth animations.",
-      technologies: ["HTML", "CSS", "JavaScript"],
-      features: [
-        "Dynamic menu display",
-        "Image gallery",
-        "Contact form",
-        "Smooth animations"
-      ],
-      status: "Completed"
-    },
-    {
-      title: "Personal Blog Platform",
-      description: "A blogging platform with article management, categories, and search functionality built with modern JavaScript.",
-      technologies: ["React", "JavaScript", "Tailwind CSS"],
-      features: [
-        "Article management",
-        "Category filtering",
-        "Search functionality",
-        "Responsive layout"
-      ],
-      status: "In Progress"
-    }
   ];
 
   return (
     <section className='py-20 px-6 bg-linear-to-br from-slate-50 via-purple-50 to-cyan-50' id="projects">
-      <div className='max-w-6xl mx-auto'>
+      <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-12'>
           <h2 className='text-4xl md:text-5xl mb-4 text-transparent bg-clip-text bg-linear-to-r from-blue-900 via-purple-900 to-cyan-900'>My Projects</h2>
           <p className='text-lg text-slate-600 max-w-2xl mx-auto'>
@@ -146,14 +143,14 @@ function Projects() {
                       ))}
                     </ul>
                   </div>                  <div className='flex gap-3 mt-6'>
-                    <button className={`flex-1 bg-linear-to-r ${headerGradients[index]} hover:opacity-90 text-white py-2 px-4 rounded-lg transition-all hover:scale-105 flex items-center justify-center gap-2 text-sm shadow-lg`}>
+                    <a href={project.liveDemo} className={`flex-1 bg-linear-to-r ${headerGradients[index]} hover:opacity-90 text-white py-2 px-4 rounded-lg transition-all hover:scale-105 flex items-center justify-center gap-2 text-sm shadow-lg`}>
                       <ExternalLink className='w-4 h-4' />
                       Live Demo
-                    </button>
-                    <button className='flex-1 border-2 border-purple-600 text-purple-900 hover:bg-purple-600 hover:text-white py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm'>
+                    </a>
+                    <a href={project.code} className='flex-1 border-2 border-purple-600 text-purple-900 hover:bg-purple-600 hover:text-white py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm'>
                       <Github className='w-4 h-4' />
                       Code
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

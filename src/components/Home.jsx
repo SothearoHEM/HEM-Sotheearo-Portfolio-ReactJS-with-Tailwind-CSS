@@ -1,7 +1,7 @@
-import React from 'react'
 import { useState, useEffect } from 'react';
 import { Mail, Download, ChevronDown } from 'lucide-react';
 import profileImg from '../assets/DSC02808-4.jpg';
+import MyCv from '../assets/Hem Sothearo-CV.pdf';
 
 function Home() {
   const [displayedText, setDisplayedText] = useState('');
@@ -35,12 +35,12 @@ function Home() {
               <img 
               src={profileImg} 
               alt="Hem Sothearo" 
-              className='relative w-80 h-80 md:w-100 md:h-100 rounded-full object-cover border-gradient shadow-2xl'
+              className='relative w-75 h-75 md:w-90 md:h-90 rounded-full object-cover border-gradient shadow-2xl'
             />
             </div>
           </div>
           
-          <div className='text-center md:text-left flex-1 md:ml-10'>
+          <div className='text-center md:text-left flex-1 md:ml-10 ml-0 md:px-0 px-1'>
             <div className='mb-4'>
               <span className='inline-block bg-linear-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm'>
                 Welcome to my portfolio
@@ -55,37 +55,40 @@ function Home() {
               {displayedText}<span className='animate-pulse'>|</span>
             </h2>
             
-            <p className='text-lg md:text-xl max-w-2xl leading-relaxed mb-4'>
+            <p className='text-md md:text-xl max-w-2xl leading-relaxed mb-4'>
               I am a third-year Computer Science student who enjoys building websites. 
               I have skills in HTML, CSS, and JavaScript, and I like making web pages that look good 
               and work well on all devices.
             </p>
             
-            <p className='text-lg md:text-xl max-w-2xl leading-relaxed mb-8 text-cyan-200'>
+            <p className='text-md md:text-xl max-w-2xl leading-relaxed mb-8 text-cyan-200'>
               I am eager to learn more about front-end development and gain real experience 
               by working with a professional team.
             </p>
             
-            <div className='flex gap-4 justify-center md:justify-start mb-8'>
+            <div className='md:flex flex-wrap md:space-y-0 space-y-4 gap-4 justify-center md:justify-start md:mb-8 mb-0'>
               <a 
                 href="#contact" 
-                className='bg-linear-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-3 rounded-lg transition-all hover:scale-105 flex items-center gap-2 shadow-lg shadow-purple-500/50'
+                className='bg-linear-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-4 py-3 rounded-lg transition-all hover:scale-105 flex items-center gap-2 shadow-lg shadow-purple-500/50 justify-center'
               >
                 <Mail className='w-5 h-5' />
                 Contact Me
               </a>
               <a 
                 href="#projects" 
-                className='border-2 border-cyan-400 hover:bg-cyan-400/20 text-white px-8 py-3 rounded-lg transition-all hover:scale-105 flex items-center gap-2'
+                className='border-2 border-cyan-400 hover:bg-cyan-400/20 text-white px-4 py-3 rounded-lg transition-all hover:scale-105 flex items-center gap-2 justify-center'
               >
                 View Projects
               </a>
-              <button 
-                className='border-2 border-purple-400 hover:bg-purple-400/20 text-white px-6 py-3 rounded-lg transition-all hover:scale-105'
+              <a 
+                href={MyCv} 
+                download
+                className='border-2 flex gap-2 border-purple-400 hover:bg-purple-400/20 text-white px-4 py-3 rounded-lg transition-all hover:scale-105 justify-center'
                 title="Download CV"
               >
                 <Download className='w-5 h-5' />
-              </button>
+                Download CV
+              </a>
             </div>
           </div>
         </div>

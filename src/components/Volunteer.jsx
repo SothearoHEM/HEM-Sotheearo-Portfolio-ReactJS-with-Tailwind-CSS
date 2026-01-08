@@ -1,19 +1,19 @@
-import React from 'react'
 import { Users, Heart, Home, MapPin, Calendar, Award } from 'lucide-react'
 
 function Volunteer() {
  const volunteer = [
     {
       title: "National Business for Youth 2022",
-      organization: "Angkor Enterprise",
-      location: "Pheam Cheang High School, Tboung Khmum Province",
+      organization: "CamPot Enterprise",
+      location: " ITC, Phnom Penh, Cambodia",
       date: "21 Sep 2022",
       icon: Users,
       description: "Participated in a national youth business program aimed at developing entrepreneurial skills among high school students. Collaborated with teams to develop business ideas and presentations.",
       impact: [
-        "Mentored 20+ students in business concepts",
-        "Developed teamwork and leadership skills",
-        "Enhanced presentation and communication abilities"
+        "Third Place Winner in National Competition",
+        "Gained practical experience in business planning and teamwork",
+        "Enhanced communication and presentation skills",
+        "Contributed to community development through youth empowerment"
       ]
     },
     {
@@ -22,10 +22,11 @@ function Volunteer() {
       location: "Iour Sat High School, Kampot",
       date: "17 Aug 2024",
       icon: Heart,
-      description: "Community outreach program focused on youth empowerment and education. Engaged with local students to promote higher education and career development opportunities.",
+      description: "Community service project focused on supporting local schools and underprivileged students. Engaged in activities such as donating supplies and building infrastructure.",
       impact: [
+        "Donated educational materials",
         "Inspired students to pursue higher education",
-        "Shared knowledge about technology careers",
+        "Built gates for local schools",
         "Built connections with rural communities"
       ]
     },

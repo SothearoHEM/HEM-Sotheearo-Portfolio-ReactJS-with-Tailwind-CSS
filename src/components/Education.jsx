@@ -1,4 +1,3 @@
-import React from 'react'
 import { GraduationCap, MapPin, Calendar, Award } from 'lucide-react'
 
 function Education() {
@@ -43,7 +42,7 @@ function Education() {
 
   return (
     <section className='py-20 px-6 bg-linear-to-br from-white to-purple-50' id="education">
-      <div className='max-w-6xl mx-auto'>
+      <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-12'>
           <h2 className='text-4xl md:text-5xl mb-4 text-transparent bg-clip-text bg-linear-to-r from-blue-900 via-purple-900 to-cyan-900'>Education</h2>
           <p className='text-lg text-slate-600 max-w-2xl mx-auto'>

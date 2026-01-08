@@ -1,4 +1,3 @@
-import React from 'react'
 import { Layout, Code, Wrench, Terminal, Database, MessageSquare, Lightbulb } from 'lucide-react';
 
 function Skills() {
@@ -7,27 +6,26 @@ function Skills() {
       category: "Front-End Development",
       icon: Layout,
       skills: [
-        { name: "HTML", level: 90 },
-        { name: "CSS", level: 85 },
-        { name: "JavaScript", level: 80 },
+        { name: "HTML", level: 80 },
+        { name: "CSS", level: 75 },
+        { name: "JavaScript", level: 60 },
       ]
     },
     {
       category: "Frameworks & Libraries",
       icon: Code,
       skills: [
-        { name: "React", level: 60 },
-        { name: "Tailwind CSS", level: 75 },
+        { name: "React", level: 70 },
+        { name: "Tailwind CSS", level: 70 },
       ]
     },
     {
       category: "Developer Tools",
       icon: Wrench,
       skills: [
-        { name: "Git", level: 75 },
-        { name: "GitHub", level: 80 },
-        { name: "Chrome DevTools", level: 70 },
-        { name: "VS Code", level: 85 },
+        { name: "Git", level: 65 },
+        { name: "GitHub", level: 70 },
+        { name: "VS Code", level: 70 },
       ]
     },
     {
@@ -35,16 +33,17 @@ function Skills() {
       icon: Terminal,
       skills: [
         { name: "C", level: 70 },
-        { name: "C++", level: 75 },
-        { name: "Java", level: 65 },
+        { name: "C++", level: 70 },
+        { name: "Java", level: 60 },
+        { name: "C#", level: 60 },
       ]
     },
     {
       category: "Database & Networks",
       icon: Database,
       skills: [
-        { name: "SQL", level: 70 },
-        { name: "Computer Networking", level: 80 },
+        { name: "SQL", level: 75 },
+        { name: "Computer Networking", level: 70 },
       ]
     }
   ];
@@ -68,12 +67,13 @@ function Skills() {
   ];
 
   return (
-    <section className='py-20 px-6 bg-linear-to-br from-blue-900 via-purple-900 to-indigo-900 text-white relative overflow-hidden' id="skills">      <div className='absolute inset-0 opacity-10'>
+    <section className='py-20 px-6 bg-linear-to-br from-blue-900 via-purple-900 to-indigo-900 text-white relative overflow-hidden' id="skills">      
+      <div className='absolute inset-0 opacity-10'>
         <div className='absolute top-0 left-0 w-96 h-96 bg-cyan-500 rounded-full blur-3xl'></div>
         <div className='absolute bottom-0 right-0 w-96 h-96 bg-orange-500 rounded-full blur-3xl'></div>
       </div>
 
-      <div className='max-w-6xl mx-auto relative z-10'>
+      <div className='max-w-7xl mx-auto relative z-10'>
         <div className='text-center mb-12'>
           <h2 className='text-4xl md:text-5xl mb-4'>My Skills</h2>
           <p className='text-lg text-cyan-200 max-w-2xl mx-auto'>
