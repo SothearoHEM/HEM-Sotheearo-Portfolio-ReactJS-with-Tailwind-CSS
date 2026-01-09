@@ -5,6 +5,7 @@ import { IoMdClose } from 'react-icons/io';
 
 function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   }  
@@ -27,7 +28,7 @@ function NavBar() {
                     <a 
                         key={item.id} 
                         href={item.href} 
-                        className='text-white mx-4 hover:text-blue-700 transition duration-300'
+                        className='text-white mx-4 hover:text-blue-500 transition duration-300 border-b-2 border-transparent hover:border-blue-500'
                     >
                         {item.label}
                     </a>

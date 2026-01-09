@@ -177,7 +177,7 @@ function Contact() {
                   <Github className='w-7 h-7' />
                 </a>
                 <a 
-                  href="https://www.linkedin.com/in/sothearohem/" 
+                  href="https://www.linkedin.com/in/sothearo-hem-9a862b3a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
                   className='w-14 h-14 bg-linear-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-lg flex items-center justify-center transition-all hover:scale-110 shadow-lg'
                   aria-label="LinkedIn"
                 >
