@@ -12,8 +12,12 @@ function Contact() {
     subject: '',
     message: ''
   });
-
+  const validMessage = formData.message.trim().length > 0;
   const handleSubmit = (e) => {
+    if (!validMessage) {
+      alert('Please fill all required fields before sending the message.');
+      return;
+    }
     e.preventDefault();
     emailjs.send('service_h91tuch', 'template_3d3bq8f', formData, 'Hn0BPBdxDqRJRrzZ6')
       .then((response) => {
@@ -51,7 +55,7 @@ function Contact() {
         <div className='grid md:grid-cols-2 gap-12 mb-12'>
           <div className='bg-white/10 backdrop-blur-md p-8 rounded-lg border border-white/20 shadow-2xl'>
             <h3 className='text-2xl mb-6'>Send Me a Message</h3>
-            <form className='space-y-4'>
+            <form className='space-y-4' onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className='block text-sm mb-2 text-cyan-200'>Your Name</label>
                 <input
