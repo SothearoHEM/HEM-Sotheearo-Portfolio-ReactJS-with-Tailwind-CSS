@@ -64,7 +64,7 @@ function About() {
                         <span className='text-slate-700'>Khmer</span>
                         <span className='text-purple-900'>Native</span>
                       </div>
-                      <div className='bg-slate-200 rounded-full h-2 md:w-125'>
+                      <div className='bg-slate-200 rounded-full h-2 md:w-70'>
                         <div className='bg-linear-to-r from-purple-500 to-pink-500 h-2 rounded-full' style={{ width: '100%' }}></div>
                       </div>
                     </div>
@@ -73,7 +73,7 @@ function About() {
                         <span className='text-slate-700'>English</span>
                         <span className='text-cyan-900'>Advanced</span>
                       </div>
-                      <div className='bg-slate-200 rounded-full h-2 md:w-125'>
+                      <div className='bg-slate-200 rounded-full h-2 md:w-70'>
                         <div className='bg-linear-to-r from-cyan-500 to-blue-500 h-2 rounded-full' style={{ width: '80%' }}></div>
                       </div>
                     </div>

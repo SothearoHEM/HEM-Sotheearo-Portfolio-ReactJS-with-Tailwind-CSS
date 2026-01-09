@@ -6,8 +6,9 @@ import MyCv from '../assets/Hem Sothearo-CV.pdf';
 function Home() {
   const [displayedText, setDisplayedText] = useState('');
   const fullText = 'Front-End Web Developer';
+  const blinkcursor = '|';
 
-  useEffect(() => {
+   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
       if (index <= fullText.length) {
@@ -18,6 +19,13 @@ function Home() {
       }
     }, 100);
     return () => clearInterval(timer);
+  }, []);
+  const blink = useState(true);
+  useEffect(() => {
+    const blinkTimer = setInterval(() => {
+      blink[1]((prev) => !prev);
+    }, 500);
+    return () => clearInterval(blinkTimer);
   }, []);
   return (
     <section id="home" className='bg-linear-to-br from-blue-900 via-purple-900 to-indigo-900 text-white pt-32 pb-24 px-6 min-h-screen flex items-center relative overflow-hidden'>
@@ -35,7 +43,7 @@ function Home() {
               <img 
               src={profileImg} 
               alt="Hem Sothearo" 
-              className='relative w-75 h-75 md:w-90 md:h-90 rounded-full object-cover border-gradient shadow-2xl'
+              className='relative w-60 h-60 md:w-90 md:h-90 rounded-full object-cover border-gradient shadow-2xl'
             />
             </div>
           </div>
@@ -47,12 +55,12 @@ function Home() {
               </span>
             </div>
             
-            <h1 className='text-5xl md:text-7xl mb-4'>
+            <h1 className='text-4xl md:text-7xl mb-4'>
               Hi, I&apos;m <span className='text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-purple-400 to-orange-400'>Sothearo</span>
             </h1>
             
             <h2 className='text-2xl md:text-4xl text-transparent bg-clip-text bg-linear-to-r from-cyan-300 to-purple-300 mb-6 h-12'>
-              {displayedText}<span className='animate-pulse'>|</span>
+              {displayedText}<span>{blink[0] ? blinkcursor : ''}</span>
             </h2>
             
             <p className='text-md md:text-xl max-w-2xl leading-relaxed mb-4'>
