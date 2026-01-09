@@ -5,6 +5,7 @@ import MyCv from '../assets/Hem Sothearo-CV.pdf';
 
 function Home() {
   const [displayedText, setDisplayedText] = useState('');
+  const [blink, setBlink] = useState(true);
   const fullText = 'Front-End Web Developer';
   const blinkcursor = '|';
 
@@ -20,10 +21,10 @@ function Home() {
     }, 100);
     return () => clearInterval(timer);
   }, []);
-  const blink = useState(true);
+
   useEffect(() => {
     const blinkTimer = setInterval(() => {
-      blink[1]((prev) => !prev);
+      setBlink((prev) => !prev);
     }, 500);
     return () => clearInterval(blinkTimer);
   }, []);
@@ -60,7 +61,7 @@ function Home() {
             </h1>
             
             <h2 className='text-2xl md:text-4xl text-transparent bg-clip-text bg-linear-to-r from-cyan-300 to-purple-300 mb-6 h-12'>
-              {displayedText}<span>{blink[0] ? blinkcursor : ''}</span>
+              {displayedText}<span>{blink ? blinkcursor : ''}</span>
             </h2>
             
             <p className='text-md md:text-xl max-w-2xl leading-relaxed mb-4'>
