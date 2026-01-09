@@ -22,7 +22,7 @@ function NavBar() {
   return (
     <div className='z-50 fixed top-0 left-0 right-0 px-4 md:px-6 bg-linear-to-r from-blue-900 via-purple-900 to-blue-900 h-15 shadow-lg shadow-black/20'>
         <nav className='max-w-7xl mx-auto flex items-center justify-between h-full'>
-            <a href='#home' className='text-white text-2xl'><span className='text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-purple-500'>Hem</span> Sothearo</a>
+            <a href='#home' className='text-white text-2xl'><span className='text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-purple-500'>HEM</span> Sothearo</a>
             <div className='items-center md:flex hidden'>
                 {navItems.map((item) => (
                     <a 
