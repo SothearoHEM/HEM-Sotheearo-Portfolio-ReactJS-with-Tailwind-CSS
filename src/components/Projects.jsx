@@ -45,18 +45,17 @@ function Projects() {
       code: "https://github.com/SothearoHEM/E-commerce-Project"
     },
     {
-      title: "Memory Game",
-      description: "A fun and interactive memory matching game where players flip cards to find matching pairs. Built with HTML, CSS, and JavaScript.",
+      title: "Weather App",
+      description: "A responsive weather application that fetches real-time weather data from an external API and displays it in a user-friendly interface.",
       technologies: ["JavaScript", "HTML", "CSS"],
       features: [
-        "Card flip animations",
-        "Score tracking",
+        "Real-time weather data",
+        "Search functionality for different locations",
         "Responsive design",
-        "Timer functionality"
       ],
       status: "Completed",
-      liveDemo: "https://sothearohem.github.io/Memory-Game/",
-      code: "https://github.com/SothearoHEM/Memory-Game"
+      liveDemo: "https://sothearohem.github.io/Weather-App-project/",
+      code: "https://github.com/SothearoHEM/Weather-App-project"
     },
     {
       title: "New Year Countdown Timer",

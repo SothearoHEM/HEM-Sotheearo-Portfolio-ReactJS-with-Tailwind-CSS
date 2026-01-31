@@ -12,6 +12,13 @@ function Skills() {
       ]
     },
     {
+      category: "Back-End Development",
+      icon: Terminal,
+      skills: [
+        { name: "PHP", level: 50 },
+      ]
+    },
+    {
       category: "Frameworks & Libraries",
       icon: Code,
       skills: [

@@ -43,11 +43,10 @@ function About() {
                 <div>
                   <h3 className='text-xl text-transparent bg-clip-text bg-linear-to-r from-blue-900 to-purple-900 mb-2'>Background & Education</h3>
                   <p className='text-slate-700 leading-relaxed'>
-                    Currently pursuing a Bachelor of Computer Science at Royal University of Phnom Penh 
-                    (Feb 2024 – 2025). I am passionate about creating responsive and user-friendly web applications 
-                    that provide excellent user experiences. My journey in tech started with a strong foundation 
-                    in computer science fundamentals, and I&apos;ve been continuously expanding my skills in modern 
-                    web development technologies.
+                    I am currently studying Computer Science at Royal University of Phnom Penh. I am passionate about web development and enjoy learning new technologies.
+                     I have experience working with ReactJS, Tailwind CSS, PHP Laravel, and SQL databases.
+                    I am a fast learner, hardworking, and a team player. 
+                    My goal is to become a professional full-stack developer and contribute to real-world projects.
                   </p>
                 </div>
               </div>
@@ -101,9 +100,8 @@ function About() {
               <div className='bg-linear-to-r from-blue-900 via-purple-900 to-indigo-900 text-white p-6 rounded-lg shadow-xl shadow-purple-500/20'>
                 <h3 className='text-xl mb-3'>Career Objective</h3>
                 <p className='leading-relaxed'>
-                  I am seeking an internship or entry-level position as a Front-End Developer where I can 
-                  apply my technical skills, contribute to meaningful projects, and continue growing as a 
-                  professional in a collaborative team environment.
+                  I am a Computer Science student seeking a Web Developer Intern position where I can apply my skills in ReactJS and PHP Laravel to real-world projects.
+                   I aim to improve my technical abilities, gain practical experience, and contribute to the growth of the organization.
                 </p>
               </div>
             </div>

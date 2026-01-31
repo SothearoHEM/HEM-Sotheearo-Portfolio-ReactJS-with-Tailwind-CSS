@@ -6,7 +6,7 @@ import MyCv from '../assets/Hem Sothearo-CV.pdf';
 function Home() {
   const [displayedText, setDisplayedText] = useState('');
   const [blink, setBlink] = useState(true);
-  const fullText = 'Front-End Web Developer';
+  const fullText = 'Web Developer Intern';
   const blinkcursor = '|';
 
    useEffect(() => {
@@ -65,14 +65,11 @@ function Home() {
             </h2>
             
             <p className='text-md md:text-xl max-w-2xl leading-relaxed mb-4'>
-              I am a third-year Computer Science student who enjoys building websites. 
-              I have skills in HTML, CSS, and JavaScript, and I like making web pages that look good 
-              and work well on all devices.
+              I am a third-year Computer Science student who enjoys building websites and web applications. I have experience using ReactJS for frontend and PHP Laravel for backend. I can create simple APIs, connect databases, and build responsive web pages. I am eager to improve my skills and gain real-world experience as a web developer intern.
             </p>
             
             <p className='text-md md:text-xl max-w-2xl leading-relaxed mb-8 text-cyan-200'>
-              I am eager to learn more about front-end development and gain real experience 
-              by working with a professional team.
+              Feel free to explore my portfolio and reach out if you have any opportunities or questions!
             </p>
             
             <div className='md:flex flex-wrap md:space-y-0 space-y-4 gap-4 justify-center md:justify-start md:mb-8 mb-0'>
