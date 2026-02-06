@@ -6,7 +6,7 @@ import MyCv from '../assets/Hem Sothearo-CV.pdf';
 function Home() {
   const [displayedText, setDisplayedText] = useState('');
   const [blink, setBlink] = useState(true);
-  const fullText = 'Web Developer Intern';
+  const fullText = 'Web Developer';
   const blinkcursor = '|';
 
    useEffect(() => {
