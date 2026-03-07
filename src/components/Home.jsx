@@ -6,10 +6,10 @@ import MyCv from '../assets/Hem Sothearo-CV.pdf';
 function Home() {
   const [displayedText, setDisplayedText] = useState('');
   const [blink, setBlink] = useState(true);
-  const fullText = 'Web Developer';
-  const blinkcursor = '|';
+  const fullText = 'Web Developer | Computer Science Student';
+  const blinkCursor = '|';
 
-   useEffect(() => {
+  useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
       if (index <= fullText.length) {
@@ -60,19 +60,21 @@ function Home() {
               Hi, I&apos;m <span className='text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-purple-400 to-orange-400'>Sothearo</span>
             </h1>
             
-            <h2 className='text-2xl md:text-4xl text-transparent bg-clip-text bg-linear-to-r from-cyan-300 to-purple-300 mb-6 h-12'>
-              {displayedText}<span>{blink ? blinkcursor : ''}</span>
-            </h2>
+            <div className='flex items-center justify-center md:justify-start mb-6 h-12'>
+              <h2 className='text-2xl md:text-3xl text-transparent bg-clip-text bg-linear-to-r from-cyan-300 to-purple-300'>
+                {displayedText}<span className='text-2xl md:text-4xl text-purple-300' style={{ opacity: blink ? 1 : 0 }}>{blinkCursor}</span>
+              </h2>
+            </div>
             
-            <p className='text-md md:text-xl max-w-2xl leading-relaxed mb-4'>
+            <p className='text-base md:text-xl max-w-2xl leading-relaxed mb-4'>
               I am a third-year Computer Science student who enjoys building websites and web applications. I have experience using ReactJS for frontend and PHP Laravel for backend. I can create simple APIs, connect databases, and build responsive web pages. I am eager to improve my skills and gain real-world experience as a web developer intern.
             </p>
             
-            <p className='text-md md:text-xl max-w-2xl leading-relaxed mb-8 text-cyan-200'>
+            <p className='text-base md:text-xl max-w-2xl leading-relaxed mb-8 text-cyan-200'>
               Feel free to explore my portfolio and reach out if you have any opportunities or questions!
             </p>
             
-            <div className='md:flex flex-wrap md:space-y-0 space-y-4 gap-4 justify-center md:justify-start md:mb-8 mb-0'>
+            <div className='flex flex-wrap gap-4 justify-center md:justify-start md:mb-8 mb-0'>
               <a 
                 href="#contact" 
                 className='bg-linear-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-4 py-3 rounded-lg transition-all hover:scale-105 flex items-center gap-2 shadow-lg shadow-purple-500/50 justify-center'

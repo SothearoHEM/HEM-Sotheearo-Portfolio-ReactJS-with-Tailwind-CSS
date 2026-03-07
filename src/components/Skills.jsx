@@ -100,14 +100,16 @@ function Skills() {
                 'from-purple-500/20 to-pink-500/20',
                 'from-orange-500/20 to-red-500/20',
                 'from-teal-500/20 to-cyan-500/20',
-                'from-indigo-500/20 to-purple-500/20'
+                'from-indigo-500/20 to-purple-500/20',
+                'from-pink-500/20 to-rose-500/20'
               ];
               const barGradients = [
                 'from-cyan-400 to-blue-500',
                 'from-purple-400 to-pink-500',
                 'from-orange-400 to-red-500',
                 'from-teal-400 to-cyan-500',
-                'from-indigo-400 to-purple-500'
+                'from-indigo-400 to-purple-500',
+                'from-pink-400 to-rose-500'
               ];
               return (
                 <div key={index} className={`bg-linear-to-br ${gradients[index]} backdrop-blur-sm p-6 rounded-lg border border-white/10 hover:border-white/30 transition-all hover:scale-105 shadow-xl`}>

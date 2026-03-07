@@ -142,11 +142,11 @@ function Projects() {
                       ))}
                     </ul>
                   </div>                  <div className='flex gap-3 mt-6'>
-                    <a href={project.liveDemo} className={`flex-1 bg-linear-to-r ${headerGradients[index]} hover:opacity-90 text-white py-2 px-4 rounded-lg transition-all hover:scale-105 flex items-center justify-center gap-2 text-sm shadow-lg`}>
+                    <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className={`flex-1 bg-linear-to-r ${headerGradients[index]} hover:opacity-90 text-white py-2 px-4 rounded-lg transition-all hover:scale-105 flex items-center justify-center gap-2 text-sm shadow-lg`}>
                       <ExternalLink className='w-4 h-4' />
                       Live Demo
                     </a>
-                    <a href={project.code} className='flex-1 border-2 border-purple-600 text-purple-900 hover:bg-purple-600 hover:text-white py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm'>
+                    <a href={project.code} target="_blank" rel="noopener noreferrer" className='flex-1 border-2 border-purple-600 text-purple-900 hover:bg-purple-600 hover:text-white py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm'>
                       <Github className='w-4 h-4' />
                       Code
                     </a>
