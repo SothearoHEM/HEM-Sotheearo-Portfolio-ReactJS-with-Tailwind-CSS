@@ -16,6 +16,7 @@ function Skills() {
       icon: Terminal,
       skills: [
         { name: "PHP", level: 50 },
+        { name: "Laravel", level: 60 },
       ]
     },
     {
