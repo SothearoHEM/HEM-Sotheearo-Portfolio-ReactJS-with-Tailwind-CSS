@@ -1,7 +1,7 @@
 import { Users, Heart, Home, MapPin, Calendar, Award } from 'lucide-react'
-import volounteerImg1 from '../assets/National Business for Youth 2022.jpg'
-import volounteerImg2 from '../assets/Together Youth and Community.jpg'
-import volounteerImg3 from '../assets/Together for 100 Families.jpg'
+import volounteerImg1 from '../assets/National-Business-for-Youth-2022.jpg'
+import volounteerImg2 from '../assets/TogetherYouth-and-Community.JPG'
+import volounteerImg3 from '../assets/Together-for-100-Families.jpg'
 
 function Volunteer() {
  const volunteer = [

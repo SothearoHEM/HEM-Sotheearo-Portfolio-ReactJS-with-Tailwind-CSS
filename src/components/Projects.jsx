@@ -1,9 +1,9 @@
 import { ExternalLink, Github } from 'lucide-react'
-import projectImg1 from '../assets/Portfolio project img.png'
-import projectImg2 from '../assets/Financial tracker img.png'
+import projectImg1 from '../assets/Portfolio-project-img.png'
+import projectImg2 from '../assets/Financial-tracker-img.png'
 import projectImg3 from '../assets/ecommerce-project.png'
-import projectImg4 from '../assets/Weather app img.png'
-import projectImg5 from '../assets/New Year Countdown img.png'
+import projectImg4 from '../assets/Weather-app-img.png'
+import projectImg5 from '../assets/New-Year-Countdown-img.png'
 
 function Projects() {
   const projects = [

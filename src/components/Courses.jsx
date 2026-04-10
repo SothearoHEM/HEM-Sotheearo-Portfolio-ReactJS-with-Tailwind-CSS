@@ -1,5 +1,5 @@
 import { BookOpen, Network, CheckCircle, MapPin, Calendar, Award } from 'lucide-react';
-import coursesImg1 from '../assets/Youth Leadership Development Program.jpg'
+import coursesImg1 from '../assets/Youth-Leadership-Development-Program.jpg'
 import coursesImg2 from '../assets/CCNA1.jpg'
 import coursesImg3 from '../assets/CCNA2.jpg'
 

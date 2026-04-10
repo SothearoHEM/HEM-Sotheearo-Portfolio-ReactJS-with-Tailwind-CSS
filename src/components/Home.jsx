@@ -46,7 +46,7 @@ function Home() {
               <img 
               src={profileImg} 
               alt="Hem Sothearo" 
-              className='relative w-60 h-60 md:w-80 md:h-80 rounded-full object-cover border-4 border-slate-900 shadow-2xl'
+              className='relative w-60 h-60 md:w-85 md:h-85 rounded-full object-cover border-4 border-slate-900 shadow-2xl'
             />
             </div>
           </div>
