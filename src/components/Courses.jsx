@@ -1,4 +1,7 @@
 import { BookOpen, Network, CheckCircle, MapPin, Calendar, Award } from 'lucide-react';
+import coursesImg1 from '../assets/Youth Leadership Development Program.jpg'
+import coursesImg2 from '../assets/CCNA1.jpg'
+import coursesImg3 from '../assets/CCNA2.jpg'
 
 function Courses() {
   const courses = [
@@ -8,6 +11,7 @@ function Courses() {
       location: "Siem Reap, Cambodia",
       period: "Sep 5 2025 – Oct 4 2025",
       icon: BookOpen,
+      image: coursesImg1,
       description: "Comprehensive leadership training program designed to develop leadership skills, critical thinking, and professional competencies for young professionals.",
       learnings: [
         "Advanced leadership techniques",
@@ -23,6 +27,7 @@ function Courses() {
       location: "RUPP, Phnom Penh, Cambodia",
       period: "Feb 2025 – Aug 2025",
       icon: Network,
+      image: coursesImg2,
       description: "Foundational networking course covering network architecture, operations, security, and troubleshooting. Hands-on experience with network configuration and management.",
       learnings: [
         "Network fundamentals and protocols",
@@ -39,6 +44,7 @@ function Courses() {
       location: "RUPP, Phnom Penh, Cambodia",
       period: "Sep 2025 – Nov 2025",
       icon: Network,
+      image: coursesImg3,
       description: "Advanced networking course focusing on switching technologies, routing protocols, and wireless network implementation. Includes practical labs and real-world scenarios.",
       learnings: [
         "Advanced routing protocols (OSPF, EIGRP)",
@@ -52,11 +58,11 @@ function Courses() {
   ];
 
   return (
-    <section className='py-20 px-6 bg-linear-to-br from-slate-50 via-cyan-50 to-purple-50' id="courses">
+    <section className='py-20 px-6 bg-[#0B1120]' id="courses">
       <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-12'>
-          <h2 className='text-4xl md:text-5xl mb-4 text-transparent bg-clip-text bg-linear-to-r from-blue-900 via-purple-900 to-cyan-900'>Courses & Certifications</h2>
-          <p className='text-lg text-slate-600 max-w-2xl mx-auto'>
+          <h2 className='text-4xl md:text-5xl mb-4 text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-300 font-bold'>Courses & Certifications</h2>
+          <p className='text-lg text-blue-200/70 max-w-2xl mx-auto'>
             Continuous learning through professional courses and certification programs
           </p>
         </div>
@@ -65,55 +71,62 @@ function Courses() {
           {courses.map((course, index) => {
             const Icon = course.icon;
             const iconGradients = [
-              'from-orange-600 to-red-600',
-              'from-cyan-600 to-blue-600',
-              'from-purple-600 to-pink-600'
+              'from-blue-600 to-cyan-500',
+              'from-indigo-500 to-blue-500',
+              'from-cyan-500 to-blue-600'
             ];
             return (
               <div 
                 key={index}
-                className='bg-white rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-purple-300'
+                className='bg-[#101827] rounded-2xl overflow-hidden hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] transition-all duration-300 border border-blue-900/40 hover:border-blue-500/50 group'
               >
-                <div className='grid md:grid-cols-3 gap-6'>                  
-                  <div className={`bg-linear-to-br ${iconGradients[index]} text-white p-8 flex flex-col items-center justify-center text-center`}>
-                    <Icon className='w-16 h-16 mb-4' />
-                    <div className='flex items-center gap-2 bg-green-400 text-green-900 px-4 py-2 rounded-full text-sm shadow-lg'>
-                      <CheckCircle className='w-4 h-4' />
-                      <span>{course.status}</span>
+                <div className='grid md:grid-cols-3 gap-0 items-stretch'>                  
+                  <div className={`relative overflow-hidden group-hover:after:opacity-100 after:content-[''] after:absolute after:inset-0 after:bg-linear-to-br ${iconGradients[index]} after:opacity-80 after:transition-opacity after:duration-500 text-white flex flex-col items-center justify-center text-center h-48 md:h-full`}>
+                    <img 
+                      src={course.image} 
+                      alt={course.title}
+                      className='absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 z-0'
+                    />
+                    <div className='relative z-10 p-8 flex flex-col items-center justify-center w-full h-full bg-[#101827]/60 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none'>
+                      <Icon className='w-16 h-16 mb-4 group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-500 drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)]' />
+                      <div className='flex items-center gap-2 bg-[#0B1120]/80 text-cyan-300 px-4 py-2 rounded-full text-sm font-medium border border-cyan-500/50 backdrop-blur-md shadow-[0_0_10px_rgba(6,182,212,0.3)]'>
+                        <CheckCircle className='w-4 h-4' />
+                        <span>{course.status}</span>
+                      </div>
                     </div>
-                  </div>                  <div className='md:col-span-2 p-8'>
+                  </div>                  <div className='md:col-span-2 p-8 bg-[#101827]'>
                     <div className='flex items-start justify-between mb-4'>
                       <div>
-                        <h3 className='text-2xl text-transparent bg-clip-text bg-linear-to-r from-blue-900 to-purple-900 mb-2'>{course.title}</h3>
-                        <p className='text-lg text-slate-700 mb-1'>{course.organization}</p>
+                        <h3 className='text-2xl text-blue-50 font-semibold mb-2 group-hover:text-cyan-300 transition-colors'>{course.title}</h3>
+                        <p className='text-lg text-cyan-400/80 mb-1'>{course.organization}</p>
                       </div>
                     </div>
 
-                    <div className='flex flex-wrap gap-4 mb-4'>
-                      <div className='flex items-center gap-2 text-slate-600'>
-                        <MapPin className='w-4 h-4 text-purple-600' />
+                    <div className='flex flex-wrap gap-4 mb-5 pb-5 border-b border-blue-900/40'>
+                      <div className='flex items-center gap-2 text-blue-200/70'>
+                        <MapPin className='w-4 h-4 text-cyan-400' />
                         <span>{course.location}</span>
                       </div>
-                      <div className='flex items-center gap-2 text-cyan-700'>
-                        <Calendar className='w-4 h-4 text-cyan-600' />
+                      <div className='flex items-center gap-2 text-blue-200/70'>
+                        <Calendar className='w-4 h-4 text-cyan-400' />
                         <span>{course.period}</span>
                       </div>
                     </div>
 
-                    <p className='text-slate-700 mb-4 leading-relaxed'>
+                    <p className='text-blue-100/80 mb-6 leading-relaxed'>
                       {course.description}
                     </p>
 
                     <div>
-                      <div className='flex items-center gap-2 mb-3'>
-                        <Award className='w-5 h-5 text-orange-600' />
-                        <h4 className='text-lg text-orange-900'>Key Learnings:</h4>
+                      <div className='flex items-center gap-2 mb-4'>
+                        <Award className='w-5 h-5 text-blue-400' />
+                        <h4 className='text-lg text-blue-300'>Key Learnings:</h4>
                       </div>
-                      <div className='grid md:grid-cols-2 gap-x-6 gap-y-2'>
+                      <div className='grid md:grid-cols-2 gap-x-6 gap-y-3'>
                         {course.learnings.map((learning, idx) => (
-                          <div key={idx} className='flex items-start gap-2'>
-                            <CheckCircle className='w-4 h-4 text-green-600 shrink-0 mt-1' />
-                            <span className='text-slate-700'>{learning}</span>
+                          <div key={idx} className='flex items-start gap-2 bg-[#0B1120] p-2.5 rounded-lg border border-blue-900/30'>
+                            <CheckCircle className='w-4 h-4 text-cyan-400 shrink-0 mt-0.5' />
+                            <span className='text-blue-200/80 text-sm leading-snug'>{learning}</span>
                           </div>
                         ))}
                       </div>
@@ -123,10 +136,11 @@ function Courses() {
               </div>
             );
           })}
-        </div>        <div className='mt-12 bg-linear-to-r from-blue-900 via-purple-900 to-indigo-900 text-white p-8 rounded-lg text-center shadow-2xl shadow-purple-500/30'>
-          <Award className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
-          <h3 className='text-2xl mb-3'>Commitment to Professional Development</h3>
-          <p className='text-lg text-blue-200 max-w-3xl mx-auto leading-relaxed'>
+        </div>        <div className='mt-12 bg-[#101827] border border-blue-800/50 text-white p-10 rounded-xl text-center relative overflow-hidden'>
+          <div className='absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-blue-600 via-transparent to-transparent blur-3xl'></div>
+          <Award className='w-12 h-12 text-cyan-400 mx-auto mb-4 relative z-10' />
+          <h3 className='text-2xl mb-3 font-semibold relative z-10'>Commitment to Professional Development</h3>
+          <p className='text-lg text-blue-200/70 max-w-3xl mx-auto leading-relaxed relative z-10'>
             I am dedicated to continuous learning and staying updated with the latest technologies and industry best practices. 
             These certifications represent my commitment to professional growth and technical excellence.
           </p>

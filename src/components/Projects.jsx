@@ -1,4 +1,9 @@
 import { ExternalLink, Github } from 'lucide-react'
+import projectImg1 from '../assets/Portfolio project img.png'
+import projectImg2 from '../assets/Financial tracker img.png'
+import projectImg3 from '../assets/E-commerce project img.png'
+import projectImg4 from '../assets/Weather app img.png'
+import projectImg5 from '../assets/New Year Countdown img.png'
 
 function Projects() {
   const projects = [
@@ -12,29 +17,29 @@ function Projects() {
         "Interactive UI components",
         "Optimized performance"
       ],
-      image: "https://picsum.photos/seed/portfolio/600/400",
+      image: projectImg1,
       status: "Completed",
       liveDemo: "https://hem-sotheearo-portfolio-react-js-wi.vercel.app/",
       code: "https://github.com/SothearoHEM/HEM-Sotheearo-Portfolio-ReactJS-with-Tailwind-CSS"
     },
     {
-      title: "Responsive Portfolio Website Used HTML CSS and JavaScript",
-      description: "A personal portfolio website to showcase my skills, projects, my education, and experience. Built using HTML, CSS, and JavaScript with a responsive design.",
-      technologies: ["HTML", "CSS", "JavaScript"],
+      title: "Automated Financial Tracker (Full-stack)",
+      description: "A full-stack financial tracking application that allows users to manage their expenses and income. Built with React for the front-end and  with Laravel for the back-end, providing a seamless user experience and robust functionality.",
+      technologies: ["HTML", "CSS", "JavaScript", "React", "Laravel", "MySQL"],
       features: [
-        "Fully responsive design",
-        "Smooth scrolling navigation",
-        "Interactive UI components",
-        "Optimized performance"
+        "User authentication and authorization",
+        "Expense and income tracking",
+        "Data visualization with charts",
+        "Responsive design for mobile and desktop"
       ],
-      image: "https://picsum.photos/seed/portfolio2/600/400",
+      image: projectImg2,
       status: "Completed",
-      liveDemo: "https://sothearohem.github.io/HEM-Sotheearo-Portfolio/",
-      code: "https://github.com/SothearoHEM/HEM-Sotheearo-Portfolio"
+      liveDemo: "https://automated-financial-tracker.vercel.app/",
+      code: "https://github.com/SothearoHEM/Automated-Financial-Tracker"
     },
     {
       title: "E-Commerce Project",
-      image: "https://picsum.photos/seed/ecommerce/600/400",
+      image: projectImg3,
       description: "A responsive e-commerce website featuring product listings, shopping cart functionality, and a user-friendly interface,Cart built with modern web technologies.",
       technologies: ["HTML", "CSS", "JavaScript","React", "Tailwind CSS"],
       features: [
@@ -49,7 +54,7 @@ function Projects() {
     },
     {
       title: "Weather App",
-      image: "https://picsum.photos/seed/weather/600/400",
+      image: projectImg4,
       description: "A responsive weather application that fetches real-time weather data from an external API and displays it in a user-friendly interface.",
       technologies: ["JavaScript", "HTML", "CSS"],
       features: [
@@ -63,7 +68,7 @@ function Projects() {
     },
     {
       title: "New Year Countdown Timer",
-      image: "https://picsum.photos/seed/newyear/600/400",
+      image: projectImg5,
       description: "A countdown timer that counts down to the New Year, featuring dynamic time updates and celebratory animations when the countdown reaches zero.",
       technologies: ["JavaScript", "HTML", "CSS"],
       features: [
@@ -78,11 +83,11 @@ function Projects() {
   ];
 
   return (
-    <section className='py-20 px-6 bg-linear-to-br from-slate-50 via-purple-50 to-cyan-50' id="projects">
+    <section className='min-h-screen py-20 px-6 bg-[#0B1120]' id="projects">
       <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-12'>
-          <h2 className='text-4xl md:text-5xl mb-4 text-transparent bg-clip-text bg-linear-to-r from-blue-900 via-purple-900 to-cyan-900'>My Projects</h2>
-          <p className='text-lg text-slate-600 max-w-2xl mx-auto'>
+          <h2 className='text-4xl md:text-5xl mb-4 text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-cyan-300 font-bold'>My Projects</h2>
+          <p className='text-lg text-blue-200/70 max-w-2xl mx-auto'>
             A showcase of web development projects demonstrating my technical skills and creativity
           </p>
         </div>
@@ -90,33 +95,33 @@ function Projects() {
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {projects.map((project, index) => {
             const headerGradients = [
-              'from-cyan-600 to-blue-600',
-              'from-purple-600 to-pink-600',
-              'from-orange-600 to-red-600',
-              'from-teal-600 to-cyan-600',
-              'from-indigo-600 to-purple-600',
-              'from-pink-600 to-rose-600'
+              'from-blue-600 to-cyan-600',
+              'from-blue-500 to-indigo-600',
+              'from-cyan-600 to-blue-500',
+              'from-indigo-500 to-blue-600',
+              'from-blue-600 to-cyan-500',
+              'from-cyan-500 to-indigo-500'
             ];
             return (
               <div
                 key={index}
-                className='group bg-white rounded-2xl overflow-hidden border-2 border-transparent hover:border-purple-300 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1'
+                className='group bg-[#101827] rounded-2xl overflow-hidden border border-blue-900/40 hover:border-blue-500/50 shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-1'
               >
                 {/* Image with overlay */}
                 <div className='relative overflow-hidden'>
                   <img
                     src={project.image}
                     alt={project.title}
-                    className='w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110'
+                    className='w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110 opacity-90 group-hover:opacity-100'
                     loading='lazy'
                   />
                   {/* Overlay */}
-                  <div className='absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4'>
+                  <div className='absolute inset-0 bg-linear-to-t from-[#0B1120] via-[#0B1120]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-wrap items-center justify-center gap-4'>
                     <a
                       href={project.liveDemo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className='bg-white/90 text-slate-800 rounded-full px-5 py-2.5 flex items-center gap-1.5 text-sm font-medium shadow-lg transition-all hover:scale-105 hover:bg-white'
+                      className='bg-blue-600 text-white rounded-full px-5 py-2.5 flex items-center gap-1.5 text-sm font-medium shadow-lg transition-all hover:scale-105 hover:bg-blue-500 hover:shadow-cyan-500/30'
                     >
                       <ExternalLink className='w-4 h-4' />
                       Live Demo
@@ -125,7 +130,7 @@ function Projects() {
                       href={project.code}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className='bg-black/50 backdrop-blur-sm text-white rounded-full px-5 py-2.5 flex items-center gap-1.5 text-sm font-medium shadow-lg transition-all hover:scale-105 hover:bg-black/70'
+                      className='bg-[#101827]/80 backdrop-blur-sm text-blue-100 border border-blue-800/50 rounded-full px-5 py-2.5 flex items-center gap-1.5 text-sm font-medium shadow-lg transition-all hover:scale-105 hover:bg-[#1E293B] hover:border-blue-500/50'
                     >
                       <Github className='w-4 h-4' />
                       Code
@@ -134,57 +139,49 @@ function Projects() {
                 </div>
 
                 {/* Content */}
-                <div className='p-5'>
+                <div className='p-5 flex flex-col h-[calc(100%-12rem)]'>
                   {/* Title & Status */}
                   <div className='mb-3'>
                     <div className='flex items-start justify-between gap-2 mb-2'>
-                      <h3 className='text-xl font-semibold text-slate-800 leading-snug'>
+                      <h3 className='text-xl font-semibold text-blue-50 leading-snug'>
                         {project.title}
                       </h3>
-                      <span className={`shrink-0 px-3 py-1 rounded-full text-xs font-semibold ${
+                      <span className={`shrink-0 px-3 py-1 rounded-full text-xs font-semibold border ${
                         project.status === 'Completed'
-                          ? 'bg-green-400 text-green-900'
-                          : 'bg-yellow-400 text-yellow-900'
+                          ? 'bg-blue-500/10 text-cyan-300 border-cyan-500/30 shadow-[0_0_10px_rgba(6,182,212,0.2)]'
+                          : 'bg-indigo-500/10 text-indigo-300 border-indigo-500/30'
                       }`}>
                         {project.status}
                       </span>
                     </div>
                   </div>
 
-                  <p className='text-slate-700 mb-4 leading-relaxed'>
+                  <p className='text-blue-200/60 mb-4 leading-relaxed'>
                     {project.description}
                   </p>
 
                   {/* Technologies */}
                   <div className='mb-4'>
-                    <h4 className='text-sm text-purple-900 mb-2'>Technologies:</h4>
+                    <h4 className='text-sm text-blue-300/80 mb-2 font-medium'>Technologies:</h4>
                     <div className='flex flex-wrap gap-2'>
-                      {project.technologies.map((tech, idx) => {
-                        const techColors = [
-                          'from-cyan-100 to-blue-100 text-cyan-900',
-                          'from-purple-100 to-pink-100 text-purple-900',
-                          'from-orange-100 to-red-100 text-orange-900',
-                          'from-teal-100 to-cyan-100 text-teal-900'
-                        ];
-                        return (
-                          <span
-                            key={idx}
-                            className={`bg-linear-to-r ${techColors[idx % techColors.length]} px-3 py-1 rounded-full text-xs`}
-                          >
-                            {tech}
-                          </span>
-                        );
-                      })}
+                      {project.technologies.map((tech, idx) => (
+                        <span
+                          key={idx}
+                          className='bg-blue-950/40 text-blue-200 border border-blue-800/30 shadow-[0_inset_0_0_10px_rgba(59,130,246,0.1)] px-3 py-1 rounded-full text-xs'
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
 
                   {/* Key Features */}
-                  <div className='mb-4'>
-                    <h4 className='text-sm text-blue-900 mb-2'>Key Features:</h4>
-                    <ul className='space-y-1'>
+                  <div className='mb-5'>
+                    <h4 className='text-sm text-blue-300/80 mb-2 font-medium'>Key Features:</h4>
+                    <ul className='space-y-1.5'>
                       {project.features.map((feature, idx) => (
-                        <li key={idx} className='text-sm text-slate-600 flex items-start gap-2'>
-                          <span className='text-blue-900 mt-1'>•</span>
+                        <li key={idx} className='text-sm text-blue-200/60 flex items-start gap-2'>
+                          <span className='text-cyan-400 mt-1'>•</span>
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -192,12 +189,12 @@ function Projects() {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className='flex gap-3 mt-6'>
+                  <div className='flex gap-3 mt-auto pt-4'>
                     <a
                       href={project.liveDemo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`flex-1 bg-linear-to-r ${headerGradients[index]} hover:opacity-90 text-white py-2 px-4 rounded-lg transition-all hover:scale-105 flex items-center justify-center gap-2 text-sm shadow-lg`}
+                      className={`flex-1 bg-linear-to-r ${headerGradients[index]} hover:opacity-90 text-white py-2 px-4 rounded-lg transition-all hover:scale-105 flex items-center justify-center gap-2 text-sm shadow-lg hover:shadow-cyan-500/30`}
                     >
                       <ExternalLink className='w-4 h-4' />
                       Live Demo
@@ -206,7 +203,7 @@ function Projects() {
                       href={project.code}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className='flex-1 border-2 border-purple-600 text-purple-900 hover:bg-purple-600 hover:text-white py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm'
+                      className='flex-1 bg-[#101827] text-blue-200 border border-blue-800/40 hover:border-blue-500/50 hover:bg-[#1E293B] py-2 px-4 rounded-lg transition-all hover:scale-105 flex items-center justify-center gap-2 text-sm shadow-lg'
                     >
                       <Github className='w-4 h-4' />
                       Code
@@ -218,14 +215,15 @@ function Projects() {
           })}
         </div>
 
-        <div className='mt-16 text-center bg-linear-to-r from-blue-900 via-purple-900 to-indigo-900 text-white p-12 rounded-2xl shadow-2xl shadow-purple-500/30'>
-          <h3 className='text-2xl mb-4'>Interested in working together?</h3>
-          <p className='text-lg text-cyan-200 mb-6 max-w-2xl mx-auto'>
+        <div className='mt-16 text-center bg-[#101827] border border-blue-900/50 text-white p-12 rounded-2xl shadow-[0_0_40px_rgba(6,182,212,0.1)] relative overflow-hidden'>
+          <div className='absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-blue-700 via-transparent to-transparent blur-2xl'></div>
+          <h3 className='text-2xl mb-4 font-semibold text-blue-50 relative z-10'>Interested in working together?</h3>
+          <p className='text-lg text-blue-200/70 mb-6 max-w-2xl mx-auto relative z-10'>
             I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
           <a
-            href="#contact"
-            className='inline-block bg-linear-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-3 rounded-lg transition-all hover:scale-105 shadow-lg'
+            href="/contact"
+            className='inline-block bg-blue-600 hover:bg-blue-500 text-white font-medium px-8 py-3 rounded-lg transition-all hover:scale-105 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-cyan-500/40 relative z-10 border border-blue-500/50'
           >
             Let&apos;s Talk
           </a>
